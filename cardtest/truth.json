@@ -1,0 +1,11 @@
+{
+ "panel_width_mm": 123.4,
+ "panel_height_mm": 84.4,
+ "ratio_w_to_card_length": 1.442,
+ "ratio_h_to_card_length": 0.986,
+ "card_w_mm": 85.6,
+ "card_h_mm": 53.98,
+ "corner_radius_mm": 7.5,
+ "stitch_pitch_mm": 3.38,
+ "hole_count": 112
+}

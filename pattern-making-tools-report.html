@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pattern Making Tools — Research Report (Nov 2026)</title>
+<style>
+  :root{
+    --ink:#1c1b19; --muted:#6b6660; --line:#e2ddd5; --bg:#fbf9f6;
+    --accent:#7a4b2a; --accent-soft:#f3e9df; --good:#2f6b46; --warn:#8a5a12;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62; font-size:16px;
+  }
+  .wrap{max-width:980px; margin:0 auto; padding:56px 28px 96px}
+  header{border-bottom:3px solid var(--ink); padding-bottom:22px; margin-bottom:40px}
+  .kicker{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); font-weight:700}
+  h1{font-size:40px; line-height:1.12; margin:10px 0 12px; letter-spacing:-.02em}
+  .sub{color:var(--muted); font-size:17px; margin:0}
+  h2{font-size:25px; margin:56px 0 6px; letter-spacing:-.01em; padding-top:8px; border-top:1px solid var(--line)}
+  h2 .num{color:var(--accent); font-variant-numeric:tabular-nums; margin-right:10px; font-weight:600}
+  h3{font-size:17px; margin:30px 0 6px}
+  h4{font-size:15px; margin:20px 0 4px; color:var(--accent)}
+  p{margin:10px 0}
+  ul,ol{margin:10px 0 10px 0; padding-left:22px}
+  li{margin:5px 0}
+  small{color:var(--muted)}
+  .lede{font-size:17.5px; color:#3a3733}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:16px; margin:22px 0}
+  .card{background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 18px; box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  .card .tag{display:inline-block; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:#fff; background:var(--accent); padding:2px 8px; border-radius:99px; font-weight:700}
+  .card h3{margin:10px 0 4px; font-size:17px}
+  .card p{margin:6px 0; font-size:14.5px}
+  .price{font-size:13px; color:var(--good); font-weight:600}
+  table{width:100%; border-collapse:collapse; margin:18px 0; font-size:14px; background:#fff; border:1px solid var(--line); border-radius:8px; overflow:hidden}
+  th{background:var(--accent-soft); text-align:left; padding:10px 11px; font-size:12.5px; letter-spacing:.04em; text-transform:uppercase; color:#5a3a22; border-bottom:1px solid var(--line); vertical-align:bottom}
+  td{padding:10px 11px; border-bottom:1px solid var(--line); vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.name{font-weight:650; white-space:nowrap}
+  .pill{display:inline-block; font-size:11px; padding:1px 7px; border-radius:99px; background:#eef3ef; color:var(--good); font-weight:700; white-space:nowrap}
+  .pill.paid{background:#fbf0e2; color:var(--warn)}
+  .pill.free{background:#e9f3ec; color:var(--good)}
+  blockquote{margin:18px 0; padding:12px 18px; border-left:3px solid var(--accent); background:#fff; color:#403c37; font-size:15px}
+  .callout{background:var(--accent-soft); border-radius:10px; padding:16px 20px; margin:22px 0; border:1px solid #e8d8c7}
+  .callout strong{color:#5a3a22}
+  .footer{margin-top:64px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+  .toc{background:#fff; border:1px solid var(--line); border-radius:10px; padding:16px 22px; margin:28px 0}
+  .toc ol{margin:6px 0; columns:2; column-gap:34px}
+  .toc a{color:var(--ink); text-decoration:none; border-bottom:1px dotted #c8bfb4}
+  .toc a:hover{color:var(--accent)}
+  .stack{border-left:3px solid var(--accent); padding-left:16px; margin:24px 0}
+  .stack h4{margin-top:0; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent)}
+  .stack ul{margin-top:4px}
+  .total{font-weight:700; color:var(--good)}
+  @media print{body{background:#fff} .wrap{padding:0} .card,table{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">Research report · 8 November 2026</div>
+  <h1>Pattern Making Tools</h1>
+  <p class="sub">A practical buying and learning guide — hand drafting, digital 2D CAD, 3D simulation, and leather-specific tools. For all skill levels, with prices in EUR/USD and German sourcing.</p>
+</header>
+
+<p class="lede">The honest headline: <strong>there is no single "best" pattern making tool.</strong> The landscape splits into four largely separate families — physical drafting tools, drafting <em>systems</em> (books/software that do the maths for you), 2D CAD, and 3D simulation — and the right answer depends on whether you want to <em>learn drafting</em>, <em>stop drafting</em>, or <em>produce for others</em>. Below is what actually holds up in 2026, what's overpriced, and three ready-made kit lists by level.</p>
+
+<div class="toc">
+  <strong>The short version</strong>
+  <ol>
+    <li><a href="#picks">Top picks at a glance</a></li>
+    <li><a href="#hand">Physical drafting tools</a></li>
+    <li><a href="#systems">Drafting systems: books</a></li>
+    <li><a href="#cad2d">Digital 2D drafting software</a></li>
+    <li><a href="#mtm">Made-to-measure generators</a></li>
+    <li><a href="#three-d">3D simulation software</a></li>
+    <li><a href="#leather">Leather-specific tools</a></li>
+    <li><a href="#projector">Paperless / projector workflow</a></li>
+    <li><a href="#industrial">Industrial CAD (if you go pro)</a></li>
+    <li><a href="#kits">Recommended setups by level</a></li>
+    <li><a href="#sourcing">Where to buy in Germany</a></li>
+  </ol>
+</div>
+
+<h2 id="picks"><span class="num">01</span>Top picks at a glance</h2>
+
+<div class="grid">
+  <div class="card">
+    <span class="tag">Best free digital</span>
+    <h3>Seamly2D</h3>
+    <p>Parametric 2D drafting. You draw once with formulas tied to a measurement table; the pattern redraws itself for any size or body. Genuinely professional-grade capability at zero cost. Steep learning curve.</p>
+    <p class="price">Free · Open source (GPLv3) · Win / macOS / Linux</p>
+  </div>
+  <div class="card">
+    <span class="tag">Best value 3D</span>
+    <h3>CLO 3D</h3>
+    <p>The reference point for 3D garment simulation. Sew 2D pieces on an avatar, see drape and fit change live. The single biggest time-saver for anyone making samples.</p>
+    <p class="price">$50/mo or $450/yr · 14-day trial · Win / macOS</p>
+  </div>
+  <div class="card">
+    <span class="tag">Best hand-drafting kit</span>
+    <h3>Metric block rulers + Aldrich</h3>
+    <p>A grading/set square, a French curve, a 24" hip curve, a vary-form curve, a 1 m straight edge, and Winifred Aldrich's <em>Metric Pattern Cutting</em>. Under €80 total and still the fastest way to understand why a pattern looks the way it does.</p>
+    <p class="price">≈ €60–90 · Amazon / Snaply / Modulor</p>
+  </div>
+  <div class="card">
+    <span class="tag">Best for leather</span>
+    <h3>Leathercraft CAD</h3>
+    <p>Donation-ware Windows/macOS CAD built around the fact that stitch holes are stitch holes — pricking-iron spacing, hardware placement, 1:1 tiled printing. Nothing generic does this cleanly.</p>
+    <p class="price">Free (donation) · Browser beta now open</p>
+  </div>
+  <div class="card">
+    <span class="tag">Best for fitting yourself</span>
+    <h3>MPattern / FreeSewing</h3>
+    <p>Enter measurements, get a pattern drafted to your body — no drafting skill required. FreeSewing is free and open (≈96 designs); MPattern is a one-off €19.99 for AI-drafted blocks.</p>
+    <p class="price">Free – €19.99 one-time</p>
+  </div>
+  <div class="card">
+    <span class="tag">Best upgrade nobody mentions</span>
+    <h3>Projector sewing</h3>
+    <p>€100–350 short-throw projector + free Pattern Projector web app. Kills printing, taping and paper storage permanently. Most people who try it don't go back.</p>
+    <p class="price">≈ €120–350 one-time</p>
+  </div>
+</div>
+
+<h2 id="hand"><span class="num">02</span>Physical drafting tools — what you actually need</h2>
+
+<p>Opinionated take from working pattern makers: <strong>buy few, buy good.</strong> The 13-piece ruler kits are mostly filler. The tools that earn their place:</p>
+
+<table>
+  <thead><tr><th>Tool</th><th>What it's for</th><th>What to buy</th><th>Price</th></tr></thead>
+  <tbody>
+    <tr><td class="name">Grading / set square</td><td>Right angles, grain lines, seam allowances, grading points. The workhorse.</td><td>A clear 45°/90° set square with metric scales, or a pattern-maker's L-square. Acrylic 3 mm resists warping.</td><td>€10–25</td></tr>
+    <tr><td class="name">French curve</td><td>Armholes, necklines, small curves.</td><td>Staedtler Mars set (German-made, transparent) — the benchmark for clarity. Or a 3-piece acrylic set.</td><td>€10–20</td></tr>
+    <tr><td class="name">Hip / vary-form curve</td><td>The long, gentle curves: hips, hems, lapels, princess seams. The one beginners skip and regret.</td><td>60 cm flexible or solid aluminium vary-form curve (Kearing is the standard name).</td><td>€12–25</td></tr>
+    <tr><td class="name">Long straight edge</td><td>Grainlines, hems, trouser lengths.</td><td>1 m / 100 cm metal or acrylic ruler. A 50 cm is not enough for trousers.</td><td>€10–18</td></tr>
+    <tr><td class="name">Pattern paper</td><td>Drafting and tracing.</td><td>80 cm × 10–15 m roll, semi-transparent, 10/20 mm grid. Gridded beats plain for grading.</td><td>€4–9 / roll</td></tr>
+    <tr><td class="name">Card/tag board or plastic</td><td>Your permanent block. Paper blocks die fast.</td><td>300 gsm card, or pattern-making plastic sheet for a truly reusable block.</td><td>€5–15</td></tr>
+    <tr><td class="name">Tracing wheel + paper</td><td>Transferring and truing seams.</td><td>Any serrated wheel; blunt for knits, sharp for wovens.</td><td>€6–12</td></tr>
+    <tr><td class="name">Awl, notcher, measuring gauge</td><td>Dart points, notch positions, hem depth, small repeats.</td><td>A sewing gauge (sliding marker) is the most underrated €4 in the kit.</td><td>€4–12</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+<strong>Skip list:</strong> the giant "15-piece drafting set" bundles (mostly duplicate curves you'll never touch), flexible "snake" rulers for garment work, and thin PVC French curves — they yellow, warp, and don't sit flat. If your budget is tight: <strong>one French curve + one vary-form curve + a 1 m ruler + gridded paper</strong> covers ~90% of drafting.
+</div>
+
+<h4>Leather-specific additions</h4>
+<ul>
+  <li><strong>Pricking irons / stitching chisels</strong> in your chosen pitch (3.0 / 3.38 / 3.85 / 4.0 mm) — the pitch <em>is</em> a pattern constraint, so decide it before you design anything.</li>
+  <li><strong>Acrylic templates</strong> (€10–30 per set) for repeat items: wallet panels, belt ends, corner radii. Print-to-scale PDF → stick on acrylic → cut → file the edges. Pays for itself on the third wallet.</li>
+  <li><strong>Craft foam for mock-ups.</strong> Cut and staple in foam before you cut leather — the standard professional trick, and it scans/imports into CAD cleanly (include a ruler in the photo for scale).</li>
+  <li><strong>Skiver, edge beveler, hole punches</strong> — shape-affecting, not just finishing: fold allowances differ for 1 mm vs 3 mm leather.</li>
+</ul>
+
+<h2 id="systems"><span class="num">03</span>Drafting systems — the books that matter</h2>
+
+<p>A "system" is a book (or software) that gives you the formulas, so you're measuring and calculating instead of guessing. This matters more than which ruler you own. Note the systems are <em>not</em> interchangeable — the block you learn is the block you'll keep.</p>
+
+<table>
+  <thead><tr><th>Title</th><th>System / origin</th><th>Best for</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td class="name">Metric Pattern Cutting for Women's Wear<br><small>Winifred Aldrich</small></td><td>British, metric</td><td>Everyone's first book</td><td>The default recommendation. Clear blocks, clear formulas, seam allowances included (slightly annoying for alterations). €35–45.</td></tr>
+    <tr><td class="name">Metric Pattern Cutting for Menswear<br><small>Winifred Aldrich</small></td><td>British, metric</td><td>Men's blocks</td><td>Usable, but dated fit and cluttered structure — the common criticism. Fine as a starter, not a final answer.</td></tr>
+    <tr><td class="name">Patternmaking for Fashion Design<br><small>Helen Joseph-Armstrong</small></td><td>US, industry standard</td><td>Career / fashion school</td><td>The "bible". Dense, exhaustive, imperial-first. Buy it when you're past the basics. €90–130.</td></tr>
+    <tr><td class="name">Schnittkonstruktionen (M. Müller &amp; Sohn)</td><td><strong>German, metric</strong></td><td>Best fit, serious study</td><td>The system most German-speaking pattern makers and tailors train on. Expensive (€100–130 per volume, English editions largely download-only) but the fit logic is superb. Volumes: Kleider und Blusen, Jacken und Mäntel, Hosen, Rock.</td></tr>
+    <tr><td class="name">Hofenbitzer — Mode- und Schnittkonstruktion</td><td>German, metric</td><td>Structured German alternative</td><td>The other mainstream German textbook. Very systematic, used in German vocational training (Ausbildung).</td></tr>
+    <tr><td class="name">Bunka Fashion College textbooks</td><td>Japanese, drape-led</td><td>Refined, body-type-aware fit</td><td>Often called the most thorough measurement/body-shape approach. Hard to source in English outside Japan; expensive.</td></tr>
+    <tr><td class="name">The Pattern Making Primer<br><small>Barnfield &amp; Richards</small></td><td>General / beginner</td><td>Absolute beginners</td><td>Friendly bridge between "following patterns" and "understanding them". Good gift. €20–28.</td></tr>
+    <tr><td class="name">How to Make Sewing Patterns<br><small>Donald McCunn</small></td><td>General</td><td>Self-taught, non-fashion-school</td><td>Written for people who aren't fashion students. Frequently recommended in drafting forums.</td></tr>
+    <tr><td class="name">Pattern Magic (series)<br><small>Tomoko Nakamichi</small></td><td>Japanese, creative</td><td>Advanced / creative</td><td>Not a course — a set of beautiful manipulation puzzles. Buy after you can draft a block.</td></tr>
+    <tr><td class="name">Concepts of Pattern Grading<br><small>Susan Minick</small></td><td>Grading</td><td>Making size runs</td><td>The one book that actually explains grading properly. Only relevant if you sell.</td></tr>
+  </tbody>
+</table>
+
+<blockquote><strong>For your case specifically:</strong> you're in Germany, so the metric systems are a genuine advantage — no inch conversions, and Müller &amp; Sohn / Hofenbitzer logic is what local tailors, vocational schools and many European factories use. Aldrich (metric edition) is still the gentler entry point; Müller &amp; Sohn is the upgrade once you're committed.</blockquote>
+
+<h4>Free learning, ranked by usefulness</h4>
+<ul>
+  <li><strong>YouTube:</strong> Cornelius Quiring (men's drafting, calm and rigorous), The Closet Historian (historical + drafting), Evelyn Wood (drafting and fitting), Pattern Studio 101 (walk-throughs).</li>
+  <li><strong>FreeSewing's documentation</strong> — genuinely good explanations of why parametric patterns work.</li>
+  <li><strong>Seamly2D wiki + forum</strong> — the best free written resource on parametric drafting in existence.</li>
+  <li><strong>Public domain:</strong> <em>Practical Dress Design</em> (Mabel Erwin) and Harriet Pepin's <em>Modern Pattern Design</em> — free, still excellent on dart manipulation.</li>
+</ul>
+
+<h2 id="cad2d"><span class="num">04</span>Digital 2D drafting software</h2>
+
+<p>This is where "pattern making software" actually lives. Two philosophies: <strong>parametric CAD</strong> (you draw the logic — it resizes itself) and <strong>vector drawing</strong> (you draw the shape).</p>
+
+<div class="callout">
+<strong>Corrected since the November 2026 draft:</strong> Affinity is no longer a €75 one-time purchase. Canva retired the perpetual licence on 29 October 2025 and merged Designer, Photo and Publisher into a single free app (<em>Affinity</em>, at affinity.studio). Every core tool, all export formats, CMYK and print preflight are free; only the Canva AI features need Canva Pro (≈ €12–18/mo). Two caveats worth knowing: a free Canva account is required to activate it, and the new <code>.af</code> format is one-way — it opens V2 files, but V2 cannot open its files.
+</div>
+
+<table>
+  <thead><tr><th>Tool</th><th>Type</th><th>Price (2026)</th><th>Platform</th><th>Verdict</th></tr></thead>
+  <tbody>
+    <tr><td class="name">Seamly2D</td><td>Parametric 2D CAD</td><td><span class="pill free">Free</span> GPLv3</td><td>Win / macOS / Linux</td><td>The best free option, full stop. Formula-driven measurement tables, automatic seam matching, PDF/SVG/DXF export, active community. Interface is engineering-flavoured; budget a weekend.</td></tr>
+    <tr><td class="name">Valentina</td><td>Parametric 2D CAD</td><td><span class="pill free">Free</span> (see note)</td><td>Win / macOS / Linux</td><td>The parent project Seamly2D forked from. More node-level precision control, smaller community, slower releases. Note: some ready-to-install builds now sit behind a small subscription — build-it-yourself or use Seamly2D instead.</td></tr>
+    <tr><td class="name">FreeSewing</td><td>Made-to-measure generator</td><td><span class="pill free">Free</span></td><td>Browser</td><td>Non-profit, no ads, ~96 designs, generated to your measurements. You don't draft — you pick and receive. Superb free resource; limited to what they publish.</td></tr>
+    <tr><td class="name">Inkscape</td><td>Vector drawing</td><td><span class="pill free">Free</span></td><td>Win / macOS / Linux</td><td>Genuinely used by working leather workers and pattern makers. No measurement logic, no seam allowance automation — just precise paths. Good with a vinyl cutter/laser.</td></tr>
+    <tr><td class="name">Affinity (by Canva)</td><td>Vector drawing</td><td><span class="pill free">Free</span> with a Canva account</td><td>Win / macOS (iPad TBA)</td><td><strong>Changed Oct 2025:</strong> Designer, Photo and Publisher were merged into one free app. Full vector toolset, CMYK, spot colours, preflight and SVG/EPS/PDF-X export at €0. Only the Canva AI layer is paid. The default vector choice now.</td></tr>
+    <tr><td class="name">Adobe Illustrator</td><td>Vector drawing</td><td>≈ €26/mo</td><td>Win / macOS</td><td>Industry-adjacent standard for tech packs and flats. Weak at stitch-hole spacing (a real, documented complaint). Only worth it if you're already in Adobe.</td></tr>
+    <tr><td class="name">Wild Ginger PatternMaster Boutique</td><td>Parametric (sloper generator)</td><td>$175 one-time</td><td>Windows</td><td>Long-running, less fashionable, quietly very good: drafts slopers and design variations to your measurements, and projects/prints directly. 90-day money back. Excellent for home sewists who want output, not a CAD hobby.</td></tr>
+    <tr><td class="name">MPattern</td><td>AI made-to-measure</td><td>€19.99 one-time</td><td>Browser</td><td>3 free patterns, then one-off payment; drafts blocks from up to 38 measurements, exports PDF/SVG/DXF, has a CAD editor that imports DXF/SVG. Best value for custom-fit blocks.</td></tr>
+    <tr><td class="name">Tailornova</td><td>MTM + light 3D</td><td>$29–79/mo</td><td>Browser</td><td>Mix garment modules, see a 3D preview, download a made-to-measure pattern. Personal $29/mo (20 downloads); Commercial from $49. Priced for people selling, not hobbyists.</td></tr>
+    <tr><td class="name">Lekala</td><td>MTM pattern shop</td><td>from ≈ $3.95/design</td><td>Browser</td><td>Buy a specific design drafted to your measurements. Zero learning curve, per-item cost. Some free designs.</td></tr>
+    <tr><td class="name">SeamScape</td><td>Cloud parametric CAD</td><td>Free tier → paid</td><td>Browser</td><td>Newer browser-based parametric drafting with collaboration and a beta 3D check. Worth a look if desktop CAD feels like 2009; still young.</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+<strong>The single most important structural point:</strong> parametric software (Seamly2D, Valentina, PatternMaster, MPattern) is the only category that gives you <em>made-to-measure and grading from one draft</em>. If you plan to sew for different bodies—yours, a partner's, clients'—that capability is worth far more than any interface nicety. If you only ever sew one size, it's overkill and a vector tool will do.
+</div>
+
+<h2 id="mtm"><span class="num">05</span>Made-to-measure generators — the "skip drafting" route</h2>
+
+<p>Worth separating out, because it answers a different question. If your goal is <em>a garment that fits me</em>, not <em>the skill of drafting</em>, these win on time-per-garment by an order of magnitude:</p>
+
+<ul>
+  <li><strong>FreeSewing</strong> (free) — best starting point. Real designs, real measurements, real output, no cost.</li>
+  <li><strong>MPattern</strong> (€19.99 once) — blocks from a full measurement set; good for people who want a personal sloper to draft on top of.</li>
+  <li><strong>Lekala</strong> (≈$4/design) — if you want one specific dress, today.</li>
+  <li><strong>Tailornova</strong> ($29+/mo) — if you want to design variations and sell them.</li>
+  <li><strong>Wild Ginger PatternMaster</strong> ($175 once) — if you want a permanent offline tool and hate subscriptions.</li>
+</ul>
+
+<p><small>Caveat: every MTM generator is only as good as its block. Expect to make 1–2 muslins and adjust; the measurement-to-pattern maths can't capture posture, shoulder slope or bust shape perfectly.</small></p>
+
+<h2 id="three-d"><span class="num">06</span>3D simulation software</h2>
+
+<table>
+  <thead><tr><th>Tool</th><th>Price (2026)</th><th>Best for</th><th>Honest limits</th></tr></thead>
+  <tbody>
+    <tr><td class="name">CLO 3D</td><td>$50/mo or $450/yr; 14-day trial; students ~50% off</td><td>Indie designers, freelancers, small brands. Best all-round 3D; also the standard for digital fashion content and e-commerce renders.</td><td>Doesn't draft from measurements — you import or draw the pattern. Complex grading logic can get slow to correct.</td></tr>
+    <tr><td class="name">Browzwear VStitcher</td><td>Freelancer from ~$75/mo (≈$750/yr); enterprise by quote; free student licence</td><td>Production-scale 3D pipelines at real brands.</td><td>Overkill and priced accordingly for individuals.</td></tr>
+    <tr><td class="name">Style3D</td><td>from ~$99/mo</td><td>Serious 3D alternative to CLO, strong in Asian supply chains, more AI features.</td><td>Smaller Western learning-resource base.</td></tr>
+    <tr><td class="name">Marvelous Designer</td><td>from ~$39/mo</td><td>Games, film, virtual fashion — cloth simulation rather than garment production.</td><td>Not a pattern-production tool; outputs aren't structured for manufacturing.</td></tr>
+    <tr><td class="name">Blender (+ cloth sim)</td><td><span class="pill free">Free</span></td><td>Experimentation, visuals.</td><td>No pattern tools at all. Free, but you're building the workflow yourself.</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Should you buy CLO?</strong> Yes if your cost is samples: at €50/month, one virtual sample that replaces a physical one usually pays for the month. No if you sew one garment a month — 3D adds a second skill (avatar, fabric physics, seam assignment) on top of pattern making, and the learning curve is real. Try the 14-day trial on a garment you've already made physically; that's the only honest test.</p>
+
+<h2 id="leather"><span class="num">07</span>Leather — a genuinely different toolset</h2>
+
+<p>Leather pattern making is not garment pattern making with a different material. There's almost no drape, no ease, no grain-driven shaping — instead you care about <strong>thickness, folds, stitch-hole pitch, hardware centres and edge finishing</strong>. Generic fashion CAD handles this badly; generic vector tools handle it adequately; two purpose-built tools handle it well.</p>
+
+<table>
+  <thead><tr><th>Tool</th><th>Price</th><th>Why it wins / loses</th></tr></thead>
+  <tbody>
+    <tr><td class="name">Leathercraft CAD</td><td><span class="pill free">Donation-ware</span></td><td>Purpose-built: stitch holes are first-class objects, pricking-iron spacing computed, hardware libraries, tracing over scaled photos, 1:1 tiled printing. Windows/macOS; browser beta (runs on iPad/Linux) now open. Free for commercial use too — you can sell the patterns. The default answer.</td></tr>
+    <tr><td class="name">EasyPatt</td><td><span class="pill free">Free</span></td><td>Browser-based, no install or account. Automatic stitch-hole generation (walking/balancing modes), hardware library, parametric variables, tiled A4/Letter print with a 50×50 mm calibration square on every page, wallet builder with 3D view. Excellent if you want zero setup.</td></tr>
+    <tr><td class="name">Affinity / Illustrator / Inkscape</td><td>Free – €26/mo – free</td><td>Best curve control, best for laser/vinyl cutting and complex engraved artwork. But stitch placement spacing is genuinely painful — the well-known workaround is manual placement or awkward "objects on path". Affinity now costs nothing, which makes it the obvious free starting point for laser-ready SVG/DXF artwork.</td></tr>
+    <tr><td class="name">Fusion 360 / FreeCAD</td><td>Free (hobbyist) – paid</td><td>Parametric 2D patterns, then reuse the same model for 3D-printed moulds, CNC brass hardware, laser-cut acrylic templates. Popular with bag makers. Steep but powerful; FreeCAD's sheet-metal/workbench route also lets you design a 3D form and flatten it.</td></tr>
+    <tr><td class="name">Seamly2D (for leather)</td><td><span class="pill free">Free</span></td><td>Surprisingly workable — users report good results for leathercraft, mainly for the automatic seam allowance and clean PDF/SVG export. Use when your leather goods are garment-like (jackets, bags with gussets).</td></tr>
+  </tbody>
+</table>
+
+<h4>The leather workflow that actually works</h4>
+<ol>
+  <li>Mock up in 1/8" craft foam — staple, don't sew. Photograph or scan it flat, with a ruler in frame for scale.</li>
+  <li>Import as a background image in Leathercraft CAD / EasyPatt, set the DPI, and trace.</li>
+  <li>Add stitch lines at your pricking-iron pitch, plus hardware centres and fold lines.</li>
+  <li>Print 1:1 tiled, tape, verify with the calibration square, then stick onto pattern plastic (or cut acrylic templates for repeats).</li>
+  <li>Cut leather, transfer hole positions with an awl through the pattern.</li>
+</ol>
+
+<h2 id="projector"><span class="num">08</span>Paperless: projector sewing</h2>
+
+<p>Since 2019 this has moved from curiosity to a mainstream workflow, and it's the highest satisfaction-per-euro upgrade in the whole field.</p>
+<ul>
+  <li><strong>What you need:</strong> any projector (a €100–150 budget model genuinely works; a short-throw or ultra-short-throw reduces shadows and is nicer), a flat cutting surface, a calibration grid, and free software.</li>
+  <li><strong>Software:</strong> <strong>Pattern Projector</strong> (patternprojector.com) — free, open source, browser-based. Corrects keystone distortion in real time by aligning a projected grid to your mat, stitches multi-page PDFs, adjusts line thickness, inverts colours for dark fabric, rotates and flips. This is the piece that made the workflow practical.</li>
+  <li><strong>Patterns:</strong> a growing list of indie companies ship "projector files" (Closet Core, Love Notions, Paradise Patterns, Made for Mermaids, George + Ginger, Tiana's Closet, and dozens more). Or feed any A0/print-at-home PDF through the app.</li>
+  <li><strong>Bonus uses:</strong> marking quilting lines, tracing appliqué/embroidery, FPP/EPP templates, projecting a pattern onto leather for direct awl-marking — and for leather this is especially nice because you skip paper entirely on expensive material.</li>
+</ul>
+
+<h2 id="industrial"><span class="num">09</span>Industrial CAD — only if you're producing</h2>
+
+<p>Included for completeness, and to stop you over-buying. These are what factories and production pattern rooms run. Prices were obtained by vendors' own quote requests; almost none are published.</p>
+
+<table>
+  <thead><tr><th>System</th><th>Real-world cost</th><th>Position</th></tr></thead>
+  <tbody>
+    <tr><td class="name">Gerber AccuMark</td><td>≈ $389/mo (2D) – $599/mo (full), so ~$4,000+/yr</td><td>The industry default. In a real design-to-production environment, professional survey respondents consistently rank it first — "the factories speak Gerber". Very steep learning curve.</td></tr>
+    <tr><td class="name">Lectra Modaris</td><td>from ≈ $2,770/yr</td><td>The other big European system. Modaris 3D, strong 2D↔3D integration. Enterprise.</td></tr>
+    <tr><td class="name">Optitex</td><td>≈ $4,300/yr per licence</td><td>Close second to Gerber; integrated 2D/3D, automatic nesting, marker making; widely described as easier to learn than Gerber. Also used outside apparel (automotive, upholstery).</td></tr>
+    <tr><td class="name">TUKAcad (Tukatech)</td><td>$19–199/mo</td><td>The only industrial-grade system with published, transparent pricing. Best value if you need marker making and grading on a small-business budget.</td></tr>
+    <tr><td class="name">StyleCAD</td><td>Quote</td><td>Measurement-driven grading propagation; well-regarded pattern rooms.</td></tr>
+    <tr><td class="name">PAD System</td><td>Quote (often cited as the cheapest of this class)</td><td>Common among freelance pattern-making professionals.</td></tr>
+    <tr><td class="name">Audaces</td><td>Quote</td><td>Strong in Latin America/Europe; has AI design assistance ("Sofia").</td></tr>
+  </tbody>
+</table>
+
+<p><small>Two honest notes: (1) AI in this space is mostly marketing — no serious free AI pattern maker exists yet, and "AI pattern software" lists are largely classic CAD with a new landing page. (2) The genuinely AI-ish tools (fashionINSTA, Audaces Sofia, Style3D) help with <em>concept generation and archive-based drafting</em>, not with the actual pattern geometry you'll cut.</small></p>
+
+<h2 id="kits"><span class="num">10</span>Recommended setups by level</h2>
+
+<div class="stack">
+  <h4>Level 1 — Curious beginner (first 6 months)</h4>
+  <ul>
+    <li>Metric French curve + 60 cm vary-form curve + 1 m ruler + gridded pattern paper + sewing gauge</li>
+    <li>Aldrich, <em>Metric Pattern Cutting for Women's Wear</em> (metric edition)</li>
+    <li>FreeSewing account (free) to sew something that fits, today, while you learn</li>
+    <li>Optional: Leathercraft CAD or EasyPatt if leather is the interest</li>
+  </ul>
+  <p class="total">Total: ≈ €70–110. Do not buy software yet.</p>
+</div>
+
+<div class="stack">
+  <h4>Level 2 — Committed home sewist (year 1–3)</h4>
+  <ul>
+    <li>Add: card/plastic block, notcher, tracing wheel and paper, better acrylic curves</li>
+    <li><strong>Seamly2D</strong> (free) — invest one weekend learning parametric drafting; it will pay back forever</li>
+    <li>Projector (~€120–350) + Pattern Projector (free) if you print patterns regularly</li>
+    <li>One MTM tool for your own blocks: MPattern (€19.99) or PatternMaster Boutique ($175) if you want offline</li>
+    <li>Müller &amp; Sohn or Hofenbitzer volume for your main garment type, if you're in German-metric land</li>
+  </ul>
+  <p class="total">Total: ≈ €200–450 (spread over time)</p>
+</div>
+
+<div class="stack">
+  <h4>Level 3 — Semi-pro / making for others</h4>
+  <ul>
+    <li>CLO 3D ($50/mo) — replaces physical samples; take the trial first</li>
+    <li>Seamly2D for drafting + Affinity (free) for tech-pack flats and artwork</li>
+    <li>Minick, <em>Concepts of Pattern Grading</em> — you need grading, not just drafting</li>
+    <li>TUKAcad ($19–199/mo) if you need markers and DXF handoff to a cutter</li>
+    <li>Acrylic templates for anything you make more than three times</li>
+  </ul>
+  <p class="total">Total: ≈ €100–200/mo + one-off tools</p>
+</div>
+
+<div class="stack">
+  <h4>Leather-specific stack (any level)</h4>
+  <ul>
+    <li>Pricking irons in one pitch (decide 3.38 or 3.85 mm and stay there), skiver, edge beveler, awl, craft foam</li>
+    <li><strong>Leathercraft CAD</strong> (free/donation) desktop, or <strong>EasyPatt</strong> in the browser for zero setup</li>
+    <li>Pattern plastic or acrylic sheet + a 1:1 tiled print workflow with a calibration check</li>
+    <li>Optional: Fusion 360 free hobbyist tier if you want CNC hardware or laser-cut templates</li>
+  </ul>
+  <p class="total">Total: ≈ €80–200 + free software</p>
+</div>
+
+<h2 id="sourcing"><span class="num">11</span>Where to buy in Germany</h2>
+<ul>
+  <li><strong>Modulor</strong> (Berlin, ships DE, free over €99) — gridded semi-transparent pattern paper 80 cm × 15 m, drafting tools. The most reliable single stop.</li>
+  <li><strong>Snaply</strong> — Prym curved rulers (€25.90), notions, good English/German product pages.</li>
+  <li><strong>mtstofferie / Der Stoffladen</strong> — cheap pattern paper (€4–9 per 10 m roll), sewing gauges (€3.49), Bohin metal rulers.</li>
+  <li><strong>Müller &amp; Sohn</strong> (muellerundsohn.com, Munich) — direct source for the German drafting system, including English PDF editions where they exist (e.g. <em>Metric Patternmaking for Dresses &amp; Blouses</em>, €116.80).</li>
+  <li><strong>Leather:</strong> Tandy Leather EU, Weaver Leather, local German leather suppliers; pattern plastic from Tandy. Pricking irons: look at EU makers rather than the generic Amazon sets.</li>
+  <li><strong>Books:</strong> Thalia / Amazon.de for Aldrich and Armstrong (Armstrong is often cheapest as the international edition); AbeBooks for out-of-print Müller &amp; Sohn volumes — but note they can hit €150+ used, so buy new from the publisher where possible.</li>
+</ul>
+
+<div class="callout">
+<strong>How I'd sequence it if this were my money:</strong> buy €70 of physical tools and Aldrich this month. Sew three garments. Then install Seamly2D and rebuild one of them parametrically — that single exercise teaches you more than any course. Add a projector before you add any subscription software. Only consider CLO 3D once you're making samples you'd otherwise pay someone to sew.
+</div>
+
+<div class="footer">
+  <p><strong>Sources &amp; method.</strong> Compiled 8 November 2026 from vendor pricing pages (Wild Ginger, Müller &amp; Sohn, mpattern.app, seamscape.com, easypatt.com, coffee-craft.net, patternprojector.com), industry survey reporting on professional software usage and real quote pricing, Affinity/Canva product announcements (affinity.studio, Oct 2025 relaunch), practitioner discussions on r/PatternDrafting and r/Leathercraft, and product/sewing-supply listings (Modulor, Snaply, mtstofferie). Prices are as published and change often — verify before purchase, especially enterprise CAD and subscriptions. Where sources disagreed (e.g. Valentina builds, Browzwear tiers), the caveat is noted inline.</p>
+</div>
+
+</div>
+</body>
+</html>

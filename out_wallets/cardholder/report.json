@@ -1,0 +1,32 @@
+{
+ "wallet": "card_holder",
+ "params": {
+  "style": "card_holder",
+  "cards": 4,
+  "leather_t": 1.0,
+  "pitch": 3.85,
+  "reveal": 10.0,
+  "body_w": 91.6,
+  "body_h": 149.1,
+  "corner_r": 3.0,
+  "stitch": {
+   "pitch": 3.8626,
+   "n_holes": 119,
+   "perimeter": 459.6493384746709,
+   "mode": "variable",
+   "spacing_error": 0.0,
+   "points": "<119 points>"
+  }
+ },
+ "pieces": [
+  {
+   "name": "01_body",
+   "width_mm": 91.6,
+   "height_mm": 149.1,
+   "holes": 119,
+   "folds": 0
+  }
+ ],
+ "leather_area_dm2": 136.4996,
+ "leather_area_cm2": 13650.0
+}

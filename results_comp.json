@@ -1,0 +1,45 @@
+{
+ "markers_detected": 4,
+ "marker_reproj_err_mm": 0.0,
+ "panel_area_mm2": 10605.9,
+ "bbox_mm": [
+  111.29,
+  96.28
+ ],
+ "panel_rotation_deg": 6.96,
+ "edge_comp_mm": 0.6,
+ "bbox_mm_compensated": [
+  110.3,
+  95.42
+ ],
+ "corner_radius_mm": 8.72,
+ "holes_detected": 108,
+ "hole_diameter_mm": 1.62,
+ "edge_offset_mm": 4.0,
+ "stitch_pitch_raw_mm": 3.797,
+ "stitch_pitch_mm": 3.85,
+ "stitch_pitch_snap_err_mm": 0.053,
+ "holes_after_dedupe": 96,
+ "holes_inliers": 92,
+ "outline_err_mm": {
+  "mean": 0.417,
+  "p95": 0.772,
+  "max": 0.811
+ },
+ "truth": {
+  "width": 110.0,
+  "height": 95.0,
+  "corner_radius": 8.0,
+  "stitch_pitch": 3.85,
+  "edge_offset": 3.5,
+  "hole_count": 96
+ },
+ "err": {
+  "width_mm": 1.29,
+  "height_mm": 1.28,
+  "corner_radius_mm": 0.72,
+  "pitch_mm": -0.053,
+  "edge_offset_mm": 0.5,
+  "hole_count": 0
+ }
+}

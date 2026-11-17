@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Optional high-precision capture mat: 4 ArUco DICT_4X4_50 markers, 40 mm.
+     Print at 100% on A3. Marker centres at (35,35) (265,35) (265,215) (35,215)
+     on a 300 x 250 mm sheet. Only needed if a bank card is not available. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="300mm" height="250mm"
+     viewBox="0 0 300 250">
+  <rect width="300" height="250" fill="#fff" stroke="#000" stroke-width="0.5"/>
+  <g fill="none" stroke="#bbb" stroke-width="0.2">
+    <path d="M0 50H300M0 100H300M0 150H300M0 200H300M50 0V250M100 0V250M150 0V250M200 0V250M250 0V250"/>
+  </g>
+  <g font-family="Helvetica" font-size="6" fill="#333">
+    <text x="12" y="12">leather-patterns capture mat — print at 100% on A3</text>
+    <text x="12" y="245">Verify the 50 mm grid before use. ArUco DICT_4X4_50, 40 mm, ids 0-3.</text>
+  </g>
+  <rect x="50" y="200" width="50" height="50" fill="none" stroke="#000" stroke-width="0.6"/>
+  <text x="55" y="228" font-family="Helvetica" font-size="5" fill="#666">50 x 50 mm</text>
+</svg>

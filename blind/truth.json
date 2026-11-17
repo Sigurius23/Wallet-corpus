@@ -1,0 +1,9 @@
+{
+ "panel_width_mm": 122.5,
+ "panel_height_mm": 106.5,
+ "corner_radius_mm": 8.4,
+ "stitch_pitch_mm": 3.85,
+ "edge_offset_mm": 2.95,
+ "hole_count": 109,
+ "rotation_deg": -6.8
+}

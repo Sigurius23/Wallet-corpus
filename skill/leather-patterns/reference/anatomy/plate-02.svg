@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 780" width="1140" height="780" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .lbl { font-size: 11.5px; fill: #f7f2ea; font-weight: 600; }
+      .lbl-s { font-size: 10px; fill: #f2ece1; }
+      .lbl-d { font-size: 10px; fill: #2b2622; }
+      .cap { font-size: 12px; fill: #2b2622; font-weight: 700; }
+      .note { font-size: 10px; fill: #5a5148; }
+      .outline { fill: none; stroke: #4a4038; stroke-width: 2.5; }
+    </style>
+    <pattern id="quill" width="13" height="13" patternUnits="userSpaceOnUse">
+      <rect width="13" height="13" fill="#8a6a4a"/>
+      <circle cx="6.5" cy="6.5" r="3.4" fill="#c9a97e" stroke="#6b4f36" stroke-width="1"/>
+    </pattern>
+    <pattern id="scale" width="11" height="11" patternUnits="userSpaceOnUse">
+      <rect width="11" height="11" fill="#6b6357"/>
+      <path d="M0,11 L0,4 A5.5,5.5 0 0,1 11,4 L11,11 Z" fill="#9a8b74" stroke="#4f483f" stroke-width=".8"/>
+    </pattern>
+    <pattern id="scute" width="16" height="12" patternUnits="userSpaceOnUse">
+      <rect width="16" height="12" fill="#7d6a55"/>
+      <rect x="1" y="1" width="14" height="10" rx="2" fill="#b4a184" stroke="#584a3c" stroke-width="1"/>
+    </pattern>
+    <pattern id="bead" width="9" height="9" patternUnits="userSpaceOnUse">
+      <rect width="9" height="9" fill="#5d5750"/>
+      <circle cx="4.5" cy="4.5" r="3" fill="#d8d2c6" stroke="#7a7268" stroke-width=".7"/>
+    </pattern>
+    <pattern id="dent" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#8d8375"/>
+      <circle cx="5" cy="5" r="2.6" fill="#eae5da" stroke="#6f6659" stroke-width=".7"/>
+    </pattern>
+    <pattern id="vent" width="10" height="14" patternUnits="userSpaceOnUse">
+      <rect width="10" height="14" fill="#cfc4ad"/>
+      <rect x="0.5" y="1" width="9" height="12" fill="#f0e9da" stroke="#8d7f68" stroke-width=".7"/>
+    </pattern>
+    <pattern id="crocbelly" width="14" height="12" patternUnits="userSpaceOnUse">
+      <rect width="14" height="12" fill="#a8977c"/>
+      <rect x="0.7" y="0.7" width="12.6" height="10.6" rx="1.5" fill="#d8cbb0" stroke="#6f6047" stroke-width="1"/>
+    </pattern>
+    <pattern id="horn" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#6a5642"/>
+      <path d="M0,16 L0,8 Q8,2 16,8 L16,16 Z" fill="#8f7350" stroke="#3f3222" stroke-width="1.2"/>
+    </pattern>
+  </defs>
+
+  <rect width="1140" height="780" fill="#fbf8f3"/>
+  <text x="30" y="30" class="cap" font-size="16">Plate 02 — what is hard inside the skin (L3.5)</text>
+  <text x="30" y="48" class="note">Surface types across animals. The pattern *is* the mechanics: a soft dome, a hinged plate and a fused bead each fail differently.</text>
+
+  <!-- ================= ROW 1: soft / keratinised / plated ================= -->
+  <text x="30" y="82" class="cap">1 · Where the hard part sits</text>
+
+  <!-- ostrich quill -->
+  <g>
+    <rect x="30" y="94" width="150" height="70" fill="url(#quill)" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="105" y="180" class="lbl-d" text-anchor="middle" font-weight="700">OSTRICH QUILL</text>
+    <text x="105" y="194" class="note" text-anchor="middle">empty follicle, raised collar</text>
+    <text x="105" y="207" class="note" text-anchor="middle">SOFT · creases like calf</text>
+  </g>
+  <!-- snake scale -->
+  <g>
+    <rect x="200" y="94" width="150" height="70" fill="url(#scale)" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="275" y="180" class="lbl-d" text-anchor="middle" font-weight="700">SNAKE SCALE</text>
+    <text x="275" y="194" class="note" text-anchor="middle">a fold of skin, free edge</text>
+    <text x="275" y="207" class="note" text-anchor="middle">FAILS BY LIFTING</text>
+  </g>
+  <!-- ostrich leg scute -->
+  <g>
+    <rect x="370" y="94" width="150" height="70" fill="url(#scute)" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="445" y="180" class="lbl-d" text-anchor="middle" font-weight="700">OSTRICH LEG SCUTE</text>
+    <text x="445" y="194" class="note" text-anchor="middle">large plates, front column</text>
+    <text x="445" y="207" class="note" text-anchor="middle">HARD · hinges between</text>
+  </g>
+  <!-- stingray denticle -->
+  <g>
+    <rect x="540" y="94" width="150" height="70" fill="url(#bead)" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="615" y="180" class="lbl-d" text-anchor="middle" font-weight="700">STINGRAY DENTICLE</text>
+    <text x="615" y="194" class="note" text-anchor="middle">enameloid on dentin, fused</text>
+    <text x="615" y="207" class="note" text-anchor="middle">HARD · never peels</text>
+  </g>
+  <!-- shark denticle -->
+  <g>
+    <rect x="710" y="94" width="150" height="70" fill="url(#dent)" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="785" y="180" class="lbl-d" text-anchor="middle" font-weight="700">SHARK DENTICLE</text>
+    <text x="785" y="194" class="note" text-anchor="middle">small, sharp — usually</text>
+    <text x="785" y="207" class="note" text-anchor="middle">GROUND OFF · normal leather</text>
+  </g>
+  <!-- screw -->
+  <g>
+    <rect x="880" y="94" width="230" height="70" fill="#ece5da" stroke="#4a4038" stroke-width="1.5"/>
+    <rect x="890" y="104" width="210" height="16" fill="#6b6357"/>
+    <rect x="890" y="120" width="210" height="20" fill="#8d7b62"/>
+    <circle cx="960" cy="130" r="7" fill="#d8c9a4" stroke="#5c4a32" stroke-width="1.5"/>
+    <circle cx="1005" cy="130" r="7" fill="#d8c9a4" stroke="#5c4a32" stroke-width="1.5"/>
+    <rect x="890" y="140" width="210" height="16" fill="#5c4636"/>
+    <text x="995" y="180" class="lbl-d" text-anchor="middle" font-weight="700">CROCODILIAN OSTEODERM</text>
+    <text x="995" y="194" class="note" text-anchor="middle">bone under the dorsal scales</text>
+    <text x="995" y="207" class="note" text-anchor="middle">BRITTLE · caiman creases</text>
+  </g>
+
+  <!-- ================= ROW 2: ostrich, one bird ================= -->
+  <line x1="30" y1="232" x2="1110" y2="232" stroke="#d8cfc2" stroke-width="1.5"/>
+  <text x="30" y="256" class="cap">2 · One bird, four materials — ostrich</text>
+
+  <!-- body -->
+  <g>
+    <ellipse cx="140" cy="345" rx="95" ry="72" fill="#c9bca8" stroke="#4a4038" stroke-width="2"/>
+    <ellipse cx="140" cy="330" rx="52" ry="46" fill="url(#quill)" stroke="#6b4f36" stroke-width="1.5" transform="rotate(45 140 330)"/>
+    <text x="140" y="330" class="lbl-d" text-anchor="middle" font-weight="700" font-size="9">CROWN</text>
+    <text x="140" y="342" class="lbl-d" text-anchor="middle" font-size="9">1/3 of skin</text>
+    <text x="140" y="430" class="cap" text-anchor="middle" font-size="11">FULL QUILL</text>
+    <text x="140" y="444" class="note" text-anchor="middle">crown, central back</text>
+    <text x="140" y="457" class="note" text-anchor="middle">soft, oil-rich</text>
+
+    <text x="140" y="474" class="note" text-anchor="middle" font-weight="700">SMOOTH</text>
+    <text x="140" y="487" class="note" text-anchor="middle">same hide, off the crown — no follicles</text>
+  </g>
+
+  <!-- leg -->
+  <g>
+    <path d="M300,270 L352,270 L346,392 L338,404 L330,392 L322,404 L314,392 L306,404 L300,392 Z" fill="#b4a184" stroke="#4a4038" stroke-width="2"/>
+    <rect x="320" y="278" width="12" height="108" fill="url(#scute)" stroke="none"/>
+    <rect x="300" y="278" width="20" height="108" fill="url(#scale)" stroke="none" opacity=".9"/>
+    <rect x="332" y="278" width="20" height="108" fill="url(#scale)" stroke="none" opacity=".9"/>
+    <path d="M300,270 L352,270 L352,278 L300,278 Z" fill="#6b6357"/>
+    <circle cx="314" cy="410" r="7" fill="#e3d9c2" stroke="#4a4038" stroke-width="2"/>
+    <circle cx="338" cy="410" r="7" fill="#e3d9c2" stroke="#4a4038" stroke-width="2"/>
+    <text x="326" y="430" class="cap" text-anchor="middle" font-size="11">LEG SKIN</text>
+    <text x="326" y="444" class="note" text-anchor="middle">scutes front · scales sides</text>
+    <text x="326" y="457" class="note" text-anchor="middle">soft folds at back</text>
+    <text x="326" y="474" class="note" text-anchor="middle" font-weight="700">toughest cut, sharpest edge</text>
+  </g>
+
+  <!-- foot detail -->
+  <g>
+    <rect x="410" y="266" width="300" height="188" fill="#f4ede2" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="560" y="286" class="cap" text-anchor="middle" font-size="11">THE FOOT — didactyl, two toes</text>
+    <path d="M440,300 L470,300 L474,370 Q472,392 458,396 Q444,392 442,370 Z" fill="url(#scute)" stroke="#4a4038" stroke-width="1.5"/>
+    <path d="M500,300 L524,300 L526,352 Q524,368 512,370 Q500,368 498,352 Z" fill="url(#scale)" stroke="#4a4038" stroke-width="1.5"/>
+    <path d="M442,392 Q458,404 474,392 Q470,412 458,414 Q446,412 442,392 Z" fill="#e3d9c2" stroke="#4a4038" stroke-width="2"/>
+    <path d="M498,368 Q512,378 526,368 Q522,386 512,388 Q502,386 498,368 Z" fill="#ece5da" stroke="#4a4038" stroke-width="1.5" stroke-dasharray="3 2"/>
+    <text x="458" y="418" class="note" text-anchor="middle">toe 1: wide</text>
+    <text x="458" y="430" class="note" text-anchor="middle">HOOF-LIKE NAIL</text>
+    <text x="512" y="392" class="note" text-anchor="middle">toe 2:</text>
+    <text x="512" y="404" class="note" text-anchor="middle">no claw</text>
+    <text x="424" y="446" class="note">sole = dense keratinised pads</text>
+  </g>
+
+  <!-- takeaway -->
+  <g>
+    <rect x="740" y="266" width="370" height="188" fill="#efe7d9" stroke="#b3402f" stroke-width="1.5"/>
+    <text x="756" y="288" class="cap" font-size="11">Why the foot matters to a pattern</text>
+    <text x="756" y="310" class="note">• Toe pads: dense, keratinised — abrasion-resistant,</text>
+    <text x="764" y="323" class="note">terrible at deforming</text>
+    <text x="756" y="342" class="note">• The nail is a RIGID INCLUSION at one end: you</text>
+    <text x="764" y="355" class="note">cannot fold, skive or stitch near it</text>
+    <text x="756" y="374" class="note">• Two toes ⟹ two claw ends per leg skin — check</text>
+    <text x="764" y="387" class="note">which end the seller cut</text>
+    <text x="756" y="406" class="note">• The leg has its own front/back map: scutes that</text>
+    <text x="764" y="419" class="note">resist folding at the front, loose folds at the back</text>
+    <text x="756" y="440" class="note" font-weight="700" fill="#b3402f">Use feet for edges, facings, decorative termini —</text>
+    <text x="764" y="453" class="note" font-weight="700" fill="#b3402f">never for a hinge.</text>
+  </g>
+
+  <!-- ================= ROW 3: failure modes ================= -->
+  <line x1="30" y1="496" x2="1110" y2="496" stroke="#d8cfc2" stroke-width="1.5"/>
+  <text x="30" y="520" class="cap">3 · Four surface types, four failure modes</text>
+
+  <g>
+    <rect x="30" y="532" width="255" height="120" fill="#fff" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="46" y="552" class="lbl-d" font-weight="700">SOFT CONTINUOUS (leather)</text>
+    <line x1="46" y1="566" x2="270" y2="566" stroke="#8d7b62" stroke-width="10"/>
+    <path d="M46,600 Q158,634 270,600" stroke="#b3402f" stroke-width="2" fill="none"/>
+    <text x="46" y="640" class="note">strain spreads · crack must initiate</text>
+
+    <rect x="300" y="532" width="255" height="120" fill="#fff" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="316" y="552" class="lbl-d" font-weight="700">PLATED  croc / stingray / leg</text>
+    <g>
+      <rect x="316" y="566" width="34" height="10" fill="#8d7b62"/><rect x="354" y="566" width="34" height="10" fill="#8d7b62"/>
+      <rect x="392" y="566" width="34" height="10" fill="#8d7b62"/><rect x="430" y="566" width="34" height="10" fill="#8d7b62"/>
+      <rect x="468" y="566" width="34" height="10" fill="#8d7b62"/><rect x="506" y="566" width="34" height="10" fill="#8d7b62"/>
+    </g>
+    <path d="M316,600 L350,612 L354,612 L392,600 L430,612 L434,612 L468,600 L506,612 L540,600" stroke="#b3402f" stroke-width="2" fill="none"/>
+    <text x="316" y="640" class="note">hinges at every gap · strain localises</text>
+
+    <rect x="570" y="532" width="255" height="120" fill="#fff" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="586" y="552" class="lbl-d" font-weight="700">FOLD-SCALED  snake / lizard</text>
+    <g>
+      <path d="M586,570 q17,-10 34,0" stroke="#8d7b62" stroke-width="6" fill="none"/>
+      <path d="M620,570 q17,-10 34,0" stroke="#8d7b62" stroke-width="6" fill="none"/>
+      <path d="M654,570 q17,-10 34,0" stroke="#8d7b62" stroke-width="6" fill="none"/>
+      <path d="M688,570 q17,-10 34,0" stroke="#8d7b62" stroke-width="6" fill="none"/>
+      <path d="M722,570 q17,-10 34,0" stroke="#8d7b62" stroke-width="6" fill="none"/>
+      <path d="M756,570 q17,-10 34,0" stroke="#8d7b62" stroke-width="6" fill="none"/>
+    </g>
+    <path d="M600,572 q30,-22 62,-6" stroke="#b3402f" stroke-width="2" fill="none"/>
+    <path d="M700,572 q26,-24 58,-4" stroke="#b3402f" stroke-width="2" fill="none"/>
+    <text x="586" y="640" class="note">free edges peel · fix is ADHESION</text>
+
+    <rect x="840" y="532" width="270" height="120" fill="#fff" stroke="#4a4038" stroke-width="1.5"/>
+    <text x="856" y="552" class="lbl-d" font-weight="700">FUSED BEAD (stingray)</text>
+    <g>
+      <circle cx="866" cy="580" r="11" fill="#d8d2c6" stroke="#7a7268" stroke-width="1.5"/>
+      <circle cx="892" cy="580" r="11" fill="#d8d2c6" stroke="#7a7268" stroke-width="1.5"/>
+      <circle cx="918" cy="580" r="11" fill="#d8d2c6" stroke="#7a7268" stroke-width="1.5"/>
+      <circle cx="944" cy="580" r="11" fill="#d8d2c6" stroke="#7a7268" stroke-width="1.5"/>
+      <circle cx="970" cy="580" r="11" fill="#d8d2c6" stroke="#7a7268" stroke-width="1.5"/>
+      <circle cx="996" cy="580" r="11" fill="#d8d2c6" stroke="#7a7268" stroke-width="1.5"/>
+      <circle cx="1022" cy="580" r="11" fill="#d8d2c6" stroke="#7a7268" stroke-width="1.5"/>
+      <circle cx="1048" cy="580" r="11" fill="#d8d2c6" stroke="#7a7268" stroke-width="1.5"/>
+    </g>
+    <path d="M856,606 L1058,606" stroke="#b3402f" stroke-width="2"/>
+    <path d="M866,616 q12,-8 24,0" stroke="#b3402f" stroke-width="1.5" fill="none"/>
+    <text x="856" y="640" class="note">nothing peels · the matrix takes the strain</text>
+  </g>
+
+  <!-- footer -->
+  <line x1="30" y1="676" x2="1110" y2="676" stroke="#d8cfc2" stroke-width="1.5"/>
+  <text x="30" y="700" class="cap">4 · The rule that replaces the fold-strain screen</text>
+  <text x="30" y="722" class="note" font-size="11">For a plated or scaled hide, do not ask "what is the outer-fibre strain?". Ask: <tspan font-weight="700">does the fold line fall between two plates, or through one?</tspan></text>
+  <text x="30" y="740" class="note" font-size="11">Between two plates — the hinge is the matrix, and it may last. Through a plate — the plate is what fails, and no radius will save it.</text>
+  <text x="30" y="762" class="note" font-style="italic">Crocodilian belly is the exception: low calcium, flat, regular scales — it can be used structurally. Caiman, with its osteoderms, cannot.</text>
+</svg>

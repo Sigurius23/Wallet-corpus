@@ -1,0 +1,89 @@
+{
+ "wallet": "bifold",
+ "params": {
+  "style": "bifold",
+  "cards": 8,
+  "slots_per_bank": 4,
+  "leather_t": 1.4,
+  "slot_t": 0.7,
+  "pitch": 3.85,
+  "reveal": 7.0,
+  "clearance": 2.0,
+  "pocket_h": 49.98,
+  "step": 9.0,
+  "interior_h": 78.98,
+  "interior_gap": 8.0,
+  "panel_w": 97.6,
+  "panel_h": 94.98,
+  "outer_w": 199.6,
+  "outer_h": 94.98,
+  "fold_comp": 4.4,
+  "corner_r": 8.0,
+  "closed_size": [
+   97.6,
+   95.0
+  ],
+  "stack_closed_mm": 7.7,
+  "stitch": {
+   "pitch": 3.8385,
+   "n_holes": 145,
+   "perimeter": 556.5856896572069,
+   "mode": "variable",
+   "spacing_error": 0.0,
+   "points": "<145 points>"
+  }
+ },
+ "pieces": [
+  {
+   "name": "01_outer_shell",
+   "width_mm": 199.6,
+   "height_mm": 94.98,
+   "holes": 145,
+   "folds": 1
+  },
+  {
+   "name": "02_slot_bank",
+   "width_mm": 87.6,
+   "height_mm": 78.98,
+   "holes": 0,
+   "folds": 0
+  },
+  {
+   "name": "03_slot_1",
+   "width_mm": 87.6,
+   "height_mm": 78.98,
+   "holes": 0,
+   "folds": 0
+  },
+  {
+   "name": "03_slot_2",
+   "width_mm": 87.6,
+   "height_mm": 69.98,
+   "holes": 0,
+   "folds": 0
+  },
+  {
+   "name": "03_slot_3",
+   "width_mm": 87.6,
+   "height_mm": 60.98,
+   "holes": 0,
+   "folds": 0
+  },
+  {
+   "name": "03_slot_4",
+   "width_mm": 87.6,
+   "height_mm": 51.98,
+   "holes": 0,
+   "folds": 0
+  },
+  {
+   "name": "04_bill_divider",
+   "width_mm": 87.6,
+   "height_mm": 69.98,
+   "holes": 0,
+   "folds": 0
+  }
+ ],
+ "leather_area_dm2": 547.6675,
+ "leather_area_cm2": 54766.7
+}
